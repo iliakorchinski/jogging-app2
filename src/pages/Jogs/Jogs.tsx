@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
 import classes from './Jogs.module.css';
+import { Link, useLoaderData } from 'react-router';
 
 interface Jog {
   id: string;
@@ -9,37 +9,10 @@ interface Jog {
 }
 
 export default function Jogs() {
-  const [jogs, setJogs] = useState<Jog[]>([]);
-  const token = localStorage.getItem('token');
+  const data = useLoaderData();
+  const { jogs } = data;
   console.log(jogs);
-  useEffect(() => {
-    const getJogs = async () => {
-      try {
-        const responce = await fetch(
-          'https://jogs-tracker-production.up.railway.app/jogs',
-          {
-            method: 'GET',
-            headers: {
-              accept: '*/*',
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
-        if (!responce.ok) {
-          throw new Error('Could not get jogs...');
-        }
-        const data = await responce.json();
-        return data;
-      } catch (err) {
-        console.error(err);
-      }
-    };
 
-    getJogs().then((data) => {
-      const { jogs } = data;
-      setJogs(jogs);
-    });
-  }, [token]);
   return (
     <ul className={classes.container}>
       {jogs.map((jog: Jog) => {
@@ -62,9 +35,33 @@ export default function Jogs() {
             <p>Distance: {jog.distance}</p>
             <p>Speed: {jog.speed}</p>
             <p>Time: {jog.time}</p>
+            <Link to={`/jogs/${jog.id}/edit`}>Edit</Link>
           </li>
         );
       })}
     </ul>
   );
+}
+
+export async function loader() {
+  try {
+    const token = localStorage.getItem('token');
+    const responce = await fetch(
+      'https://jogs-tracker-production.up.railway.app/jogs',
+      {
+        method: 'GET',
+        headers: {
+          accept: '*/*',
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+    if (!responce.ok) {
+      throw new Error('Could not get jogs...');
+    }
+    const data = await responce.json();
+    return data;
+  } catch (err) {
+    console.error(err);
+  }
 }
