@@ -1,0 +1,23 @@
+.form {
+  margin: 0 auto;
+  width: 40%;
+  height: 200px;
+  background-color: #7ed321;
+  padding: 3rem;
+  border-radius: 44px;
+}
+
+.button {
+  background-color: #7ed321;
+  border-radius: 25.2px;
+  border: solid 2px #ffffff;
+  padding: 0.875rem 7.778rem 0.813rem 7.778rem;
+  margin-left: 1.5rem;
+  color: #ffffff;
+}
+
+.button:hover {
+  background-color: #ffffff;
+  color: #7ed321;
+  border: solid 2px #7eb148;
+}
