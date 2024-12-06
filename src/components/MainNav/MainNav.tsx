@@ -83,7 +83,7 @@ export default function MainNav({ handleToggle }: MainNavProps) {
               </Link>
             </li>
             <li>
-              <Link to="/" className={classes.link}>
+              <Link to="/contacts" className={classes.link}>
                 Contact us
               </Link>
             </li>

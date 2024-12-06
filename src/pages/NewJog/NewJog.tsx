@@ -8,10 +8,9 @@ type NewJogProps = {
 export default function NewJog({ method }: NewJogProps) {
   let data = useLoaderData();
   const { id } = useParams();
-  console.log(id);
 
   const { jogs } = data;
-  console.log(jogs);
+
   const navigate = useNavigate();
   const token = localStorage.getItem('token');
   const handleSubmitForm: React.FormEventHandler<HTMLFormElement> = async (

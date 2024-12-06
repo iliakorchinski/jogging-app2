@@ -19,8 +19,6 @@ export default function Jogs() {
     (jog: Jog) =>
       datePicker && jog.date > datePicker.from && jog.date < datePicker.to
   );
-  console.log(jogs);
-  console.log(filterredJogs);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
