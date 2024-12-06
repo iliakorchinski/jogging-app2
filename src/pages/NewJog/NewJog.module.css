@@ -29,4 +29,13 @@
   .form {
     width: 70%;
   }
+  .button {
+    margin-left: -10%;
+  }
+}
+
+@media (max-width: 720px) {
+  .form {
+    width: 50%;
+  }
 }

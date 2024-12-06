@@ -15,7 +15,9 @@ export const JogsContext = createContext<JogsContextObj>({
 
 export const JogsContextProvider = ({ children }: JogsContextProps) => {
   //   const t = localStorage.getItem('token');
-  const [token, setToken] = useState<string | null>(null);
+  const [token, setToken] = useState<string | null>(
+    localStorage.getItem('token') || null
+  );
 
   const getToken = (token: string | null) => {
     setToken(token);

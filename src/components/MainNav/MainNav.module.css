@@ -7,13 +7,6 @@
   background-color: #7ed321;
 }
 
-.logo {
-  width: 9.188rem;
-  height: 3.5rem;
-  padding: 0 0.078rem 0 0;
-  object-fit: contain;
-}
-
 .burger {
   display: none;
   position: absolute;
@@ -54,5 +47,11 @@
   }
   .container {
     display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    left: 25%;
   }
 }

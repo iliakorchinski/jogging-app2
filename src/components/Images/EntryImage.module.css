@@ -1,0 +1,15 @@
+.bear {
+  display: block;
+  width: 50%;
+  height: 9.375rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  /* padding: 0.005rem 0.01rem 0rem 0.012rem; */
+  object-fit: contain;
+}
+
+@media (max-width: 420px) {
+  .bear {
+    width: 90%;
+  }
+}

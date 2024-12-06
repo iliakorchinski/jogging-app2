@@ -1,0 +1,12 @@
+.jog {
+  margin-bottom: 2rem;
+}
+
+.edit {
+  color: #7ed321;
+  font-weight: bold;
+  text-decoration: none;
+}
+.edit:hover {
+  text-decoration: underline;
+}
