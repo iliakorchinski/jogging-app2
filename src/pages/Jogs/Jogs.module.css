@@ -20,3 +20,20 @@
 .edit:hover {
   text-decoration: underline;
 }
+
+.date-container {
+  background-color: #eaeaea;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+.date {
+  margin-left: 3rem;
+}
+
+.input {
+  border: solid 1px #979797;
+  border-radius: 7px;
+}
