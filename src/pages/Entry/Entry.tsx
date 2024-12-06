@@ -5,6 +5,9 @@ import { JogsContext } from '../../store/jogs-context';
 import EntryImage from '../../components/Images/EntryImage';
 
 export default function Entry() {
+  const username = process.env.REACT_APP_USERNAME;
+  const psw = process.env.REACT_APP_PSW;
+
   const JogsCtx = useContext(JogsContext);
   const navigate = useNavigate();
   const handleToken = async () => {
@@ -18,8 +21,8 @@ export default function Entry() {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            username: 'alex',
-            password: 'qwerty',
+            username: username,
+            password: psw,
           }),
         }
       );

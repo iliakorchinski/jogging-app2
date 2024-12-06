@@ -6,7 +6,7 @@ type NewJogProps = {
 };
 
 export default function NewJog({ method }: NewJogProps) {
-  let data = useLoaderData();
+  const data = useLoaderData();
   const { id } = useParams();
 
   const { jogs } = data;
@@ -25,8 +25,6 @@ export default function NewJog({ method }: NewJogProps) {
         time: Number(formData.get('time')),
         date: formData.get('date'),
       };
-      console.log(formValues);
-      //https://jogs-tracker-production.up.railway.app/jogs/6751b383fdeafecbef4e69bc
       const responce = await fetch(
         `https://jogs-tracker-production.up.railway.app/jogs/${id ? id : ''}`,
         {
@@ -43,7 +41,6 @@ export default function NewJog({ method }: NewJogProps) {
       if (!responce.ok) {
         throw new Error('Could not add a jog...');
       }
-      console.log(responce);
       navigate('/jogs');
     } catch (err) {
       console.error(err);
