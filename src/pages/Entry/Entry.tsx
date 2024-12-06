@@ -1,7 +1,10 @@
+import { useContext } from 'react';
 import { useNavigate } from 'react-router';
 import classes from './Entry.module.css';
+import { JogsContext } from '../../store/jogs-context';
 
 export default function Entry() {
+  const JogsCtx = useContext(JogsContext);
   const navigate = useNavigate();
   const handleToken = async () => {
     try {
@@ -25,7 +28,8 @@ export default function Entry() {
       }
       const { accessToken } = await responce.json();
       localStorage.setItem('token', accessToken);
-      return navigate('jogs');
+      JogsCtx.getToken(localStorage.getItem('token'));
+      return navigate('/jogs');
     } catch (err) {
       console.error(err);
     }

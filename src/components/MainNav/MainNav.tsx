@@ -1,11 +1,14 @@
+import { useContext } from 'react';
 import { Link } from 'react-router';
 import classes from './MainNav.module.css';
+import { JogsContext } from '../../store/jogs-context';
 
 type MainNavProps = {
   handleToggle: () => void;
 };
 export default function MainNav({ handleToggle }: MainNavProps) {
-  const token = localStorage.getItem('token');
+  const JogsCtx = useContext(JogsContext);
+  const token = JogsCtx.token;
 
   return (
     <header className={classes.header}>
