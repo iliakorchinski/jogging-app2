@@ -3,6 +3,7 @@ import RootLayout from './pages/Root';
 import Entry from './pages/Entry/Entry';
 import Jogs, { loader as jogsLoader } from './pages/Jogs/Jogs';
 import NewJog, { loader } from './pages/NewJog/NewJog';
+import About from './pages/About/About';
 function App() {
   const router = createBrowserRouter([
     {
@@ -10,6 +11,7 @@ function App() {
       element: <RootLayout />,
       children: [
         { index: true, element: <Entry /> },
+        { path: '/about', element: <About /> },
         { path: '/jogs', element: <Jogs />, loader: jogsLoader },
         {
           path: '/jogs/new',

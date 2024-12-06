@@ -20,7 +20,7 @@
 .button {
   color: #ffffff;
   display: block;
-  width: 9.438rem;
+  width: 80%;
   height: 3.75rem;
   margin: 0 auto;
   /* padding: 1.25rem 2.125rem 1.188rem; */
@@ -35,6 +35,14 @@
 }
 
 @media (max-width: 420px) {
+  .container {
+    width: 10%;
+  }
   .bear {
+    width: 90%;
+  }
+  .button {
+    width: 200px;
+    margin-left: -70px;
   }
 }

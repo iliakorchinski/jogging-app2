@@ -1,0 +1,15 @@
+.title {
+  color: #7ed321;
+  margin-left: 10%;
+}
+.paragraph {
+  margin-left: 10%;
+  width: 50%;
+  line-height: 30px;
+}
+
+@media (max-width: 420px) {
+  .paragraph {
+    width: 80%;
+  }
+}

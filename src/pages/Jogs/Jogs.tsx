@@ -35,7 +35,9 @@ export default function Jogs() {
             <p>Distance: {jog.distance}</p>
             <p>Speed: {jog.speed}</p>
             <p>Time: {jog.time}</p>
-            <Link to={`/jogs/${jog.id}/edit`}>Edit</Link>
+            <Link to={`/jogs/${jog.id}/edit`} className={classes.edit}>
+              Edit
+            </Link>
           </li>
         );
       })}

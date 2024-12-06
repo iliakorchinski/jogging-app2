@@ -44,8 +44,15 @@
   text-decoration: underline;
 }
 
+.burger:hover {
+  cursor: pointer;
+}
+
 @media (max-width: 420px) {
   .burger {
     display: inline;
+  }
+  .container {
+    display: none;
   }
 }
