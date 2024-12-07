@@ -44,7 +44,7 @@ export default function Jogs() {
           <label>Date to</label>
           <input className={classes.input} type="date" name="to" />
         </p>
-        <button>Submit</button>
+        <button className={classes.button}>Submit</button>
       </form>
       <ul className={classes.container}>
         {filterredJogs.length === 0 && <JogsList jogs={jogs} />}

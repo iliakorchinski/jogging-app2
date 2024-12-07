@@ -2,8 +2,8 @@ export default function JogsListImage() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="87"
-      height="87"
+      width="100"
+      height="100"
       viewBox="0 0 87 87"
     >
       <g fill="none" fillRule="evenodd">

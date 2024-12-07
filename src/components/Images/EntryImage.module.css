@@ -1,6 +1,6 @@
 .bear {
   display: block;
-  width: 50%;
+  width: 100%;
   height: 9.375rem;
   margin: 0 auto;
   margin-bottom: 2rem;
@@ -10,6 +10,12 @@
 
 @media (max-width: 420px) {
   .bear {
-    width: 90%;
+    width: 300px;
+    height: 300px;
+    margin-left: -120px;
+  }
+
+  .color {
+    fill: #e990f9;
   }
 }

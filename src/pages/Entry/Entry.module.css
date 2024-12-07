@@ -21,7 +21,7 @@
 .button {
   color: #ffffff;
   display: block;
-  width: 80%;
+  width: 100%;
   height: 3.75rem;
   margin: 0 auto;
   /* padding: 1.25rem 2.125rem 1.188rem; */
@@ -33,15 +33,17 @@
   color: black;
   background-color: #ffffff;
   cursor: pointer;
+  border: 1px solid #e990f9;
 }
 
 @media (max-width: 420px) {
   .container {
+    background-color: #ffffff;
     margin-top: 30px;
     width: 10%;
   }
   .bear {
-    width: 90%;
+    width: 300px;
   }
   .button {
     width: 200px;

@@ -8,13 +8,22 @@
   border-radius: 44px;
 }
 
+.field {
+  clear: both;
+  text-align: right;
+}
+
+.label {
+  float: left;
+}
+
 .button {
   display: block;
-  width: 30%;
+  width: 70%;
+  height: 40px;
   background-color: #7ed321;
   border-radius: 25.2px;
   border: solid 2px #ffffff;
-  padding: 0.875rem 7.778rem 0.813rem 7.778rem;
   margin: 0 auto;
   color: #ffffff;
 }
@@ -29,12 +38,9 @@
   .form {
     width: 70%;
   }
-  .button {
-    margin-left: -10%;
-  }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 720px) and (min-width: 420px) {
   .form {
     width: 50%;
   }

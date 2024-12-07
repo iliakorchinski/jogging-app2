@@ -48,24 +48,24 @@ export default function NewJog({ method }: NewJogProps) {
   };
   return (
     <form className={classes.form} onSubmit={handleSubmitForm}>
-      <p>
-        <label>Distance</label>
+      <p className={classes.field}>
+        <label className={classes.label}>Distance</label>
         <input
           name="distance"
           type="number"
           defaultValue={jogs ? jogs[0].distance : ''}
         />
       </p>
-      <p>
-        <label>Time</label>
+      <p className={classes.field}>
+        <label className={classes.label}>Time</label>
         <input
           name="time"
           type="number"
           defaultValue={jogs ? jogs[0].time : ''}
         />
       </p>
-      <p>
-        <label>Date</label>
+      <p className={classes.field}>
+        <label className={classes.label}>Date</label>
         <input
           type="date"
           name="date"
